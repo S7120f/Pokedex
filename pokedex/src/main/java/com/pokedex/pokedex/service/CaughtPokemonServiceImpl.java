@@ -27,6 +27,7 @@ public class CaughtPokemonServiceImpl implements CaughtPokemonService {
             throw new RuntimeException("Pokemon hittades inte med id:" + id);
         }
         caughtPokemonRepository.deleteById(id);
+        
     }
 
     @Override

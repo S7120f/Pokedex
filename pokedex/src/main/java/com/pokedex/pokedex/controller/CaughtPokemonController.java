@@ -3,6 +3,7 @@ package com.pokedex.pokedex.controller;
 import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
@@ -17,6 +18,7 @@ import com.pokedex.pokedex.service.CaughtPokemonService;
 
 @RestController
 @RequestMapping("/api/pokemon") // Bas-URL för alla endpoints
+@CrossOrigin(origins = "http://127.0.0.1:5500")
 public class CaughtPokemonController {
     @Autowired
     private CaughtPokemonService caughtPokemonService;
@@ -65,11 +67,6 @@ public class CaughtPokemonController {
         caughtPokemonService.deleteNote(id);
     }
 
-    
-
-
-    
-    
 
 
 }
